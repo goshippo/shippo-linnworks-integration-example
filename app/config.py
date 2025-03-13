@@ -1,5 +1,5 @@
 import os
-from pydantic import BaseSettings
+from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
     DATA_STORAGE_PATH: str = os.environ.get("DATA_STORAGE_PATH", "data/storage")

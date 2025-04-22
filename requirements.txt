@@ -1,8 +1,8 @@
-fastapi==0.104.0
+fastapi==0.115.12
 uvicorn==0.23.2
 pydantic==2.10.6
 pydantic-settings==2.8.1
 python-dotenv==1.0.0
-pillow==10.4.0
+pillow < 10
 python-multipart==0.0.6
 httpx==0.25.0

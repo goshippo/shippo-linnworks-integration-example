@@ -7,8 +7,8 @@ from app.controllers import setup_controller, consignment_controller, manifest_c
 
 # Create FastAPI app
 app = FastAPI(
-    title="Template Driver API",
-    description="Shipping Integration API",
+    title="Example Linnworks Shipping Integration",
+    description="An Python example implementing a simple Shipping Integration for Linnworks. This example uses FastAPI.",
     version="1.0.0"
 )
 
@@ -28,7 +28,7 @@ app.include_router(manifest_controller.router, prefix="/api/Manifest", tags=["Ma
 
 @app.get("/")
 async def root():
-    return {"message": "Template Driver Shipping Integration API"}
+    return {"message": "Example Linnworks Shipping Integration"}
 
 # Exception handling
 @app.exception_handler(Exception)

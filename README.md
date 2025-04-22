@@ -61,4 +61,5 @@ Once running, you can access the Swagger UI docs at /docs or ReDoc at /redoc
 #### Manifest
 * **POST**
  `/api/Manifest/CreateManifest` - Create a shipping manifest
-* **POST** `/api/Manifest/PrintManifest` - Print a shipping manifest
+* **POST** 
+* `/api/Manifest/PrintManifest` - Print a shipping manifest

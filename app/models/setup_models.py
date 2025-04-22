@@ -12,7 +12,7 @@ class AddNewUserRequest(BaseRequest):
     account_name: str
 
 class AddNewUserResponse(BaseResponse):
-    authorization_token: Optional[str] = None
+    authorization_token: Optional[str]
 
 class UserConfigRequest(BaseRequest):
     pass
@@ -23,9 +23,9 @@ class UserConfigStage(BaseModel):
     title: str
     
 class UserConfigResponse(BaseResponse):
-    config_stage: Optional[UserConfigStage] = None
+    config_stage: Optional[UserConfigStage]
     is_config_active: bool = False
-    config_status: Optional[str] = None
+    config_status: Optional[str]
 
 class UpdateConfigRequest(BaseRequest):
     config_status: str

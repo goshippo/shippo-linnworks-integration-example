@@ -2,7 +2,7 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 import os
-
+from prometheus_fastapi_instrumentator import Instrumentator
 from app.controllers import setup_controller, consignment_controller, manifest_controller
 
 # Create FastAPI app
@@ -11,6 +11,8 @@ app = FastAPI(
     description="An Python example implementing a simple Shipping Integration for Linnworks. This example uses FastAPI.",
     version="1.0.0"
 )
+# Add basic Promethueus metrics (see https://github.com/trallnag/prometheus-fastapi-instrumentator)
+Instrumentator().instrument(app).expose(app)
 
 # Add CORS middleware
 app.add_middleware(
